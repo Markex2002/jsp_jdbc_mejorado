@@ -12,7 +12,7 @@
   <body>
     <%
       Class.forName("com.mysql.cj.jdbc.Driver");
-      Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto","root", "user");
+      Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:30306/baloncesto","root", "user");
       Statement s = conexion.createStatement();
 
       ResultSet listado = s.executeQuery ("SELECT * FROM socio");
@@ -22,7 +22,8 @@
     <%
       while (listado.next()) {
           out.println("<tr><td>");
-          out.println(listado.getString("socioID") + "</td>");
+          out.println("<a href='detalleSocio.jsp?socioID=" + listado.getInt("socioID") + "'>" +listado.getInt("socioID")+"</a>" + "</td>");
+          //out.println(listado.getString("socioID") + "</td>");
           out.println("<td>" + listado.getString("nombre") + "</td>");
           out.println("<td>" + listado.getString("estatura") + "</td>");
           out.println("<td>" + listado.getString("edad") + "</td>");

@@ -14,6 +14,8 @@
 <br>
 <a href="formularioSocio.jsp">Fomulario de Socio Nuevo</a>
 <br>
-<a href="pideNumeroSocio.jsp">Listado de Socios</a>
+<a href="pideNumeroSocio.jsp">Pedir Número de Socios</a>
+<br>
+<a href="detalleSocio.jsp">Buscar socio mediante ID</a>
 </body>
 </html>
