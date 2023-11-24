@@ -16,6 +16,11 @@
 <br>
 <a href="pideNumeroSocio.jsp">Pedir Número de Socios</a>
 <br>
-<a href="detalleSocio.jsp">Buscar socio mediante ID</a>
+<form method="get" action="detalleSocio.jsp">
+    <p>Buscar socio mediante ID</p>
+    <input type="text" name="socioID">
+    <input type="submit" value="Enviar">
+</form>
+
 </body>
 </html>
