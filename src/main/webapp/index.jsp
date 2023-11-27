@@ -22,5 +22,20 @@
     <input type="submit" value="Enviar">
 </form>
 
+<br>
+<h1><%= "Entrenamiento!" %></h1>
+<a href="Entrenamiento/listadoEntrenamiento.jsp">Listado de Entrenamientos</a>
+<br>
+<a href="Entrenamiento/formularioEntrenamiento.jsp">Formulario Nuevo Entrenamiento</a>
+<br>
+<a href="Entrenamiento/pideNumeroEntrenamiento.jsp">Pedir Número Entrenamientos</a>
+<br>
+
+<form method="get" action="Entrenamiento/detalleEntrenamiento.jsp">
+    <p>Buscar Entrenamiento mediante ID</p>
+    <input type="text" name="idEntrenamiento">
+    <input type="submit" value="Enviar">
+</form>
+
 </body>
 </html>
