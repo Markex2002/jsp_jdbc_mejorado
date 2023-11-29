@@ -27,7 +27,7 @@
 
           %>
           <tr class=<%=claseDestacar%>>
-              <td><%=listado.getInt("socioID")%></td>
+              <td><a href="detalleSocio.jsp?socioID=<%=listado.getInt("socioID")%>"><%=listado.getInt("socioID")%></a></td>
               <td><%=listado.getString("nombre")%></td>
               <td><%=listado.getInt("estatura")%></td>
               <td><%=listado.getInt("edad")%></td>

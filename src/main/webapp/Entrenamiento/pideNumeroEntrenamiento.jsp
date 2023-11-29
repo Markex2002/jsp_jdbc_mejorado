@@ -26,13 +26,13 @@
 
           %>
           <tr class=<%=claseDestacar%>>
-              <td><%=listado.getInt("id")%></td>
+              <td><a href="detalleEntrenamiento.jsp?id=<%=listado.getInt("id")%>"><%=listado.getInt("id")%></a></td>
               <td><%=listado.getString("tipoEntrenamiento")%></td>
               <td><%=listado.getString("ubicacion")%></td>
               <td><%=listado.getString("fechaRealizacion")%></td>
 
       <td>
-      <form method="get" action="borraSocio.jsp">
+      <form method="get" action="borraEntrenamiento.jsp">
         <input type="hidden" name="codigo" value="<%=listado.getString("id") %>"/>
         <input type="submit" value="borrar">
       </form>

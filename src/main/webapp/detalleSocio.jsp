@@ -1,6 +1,5 @@
 <%@page import="java.sql.*" %>
 <%@page import="java.util.Objects" %>
-<%@ page import="java.io.IOException" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <html>
 <head>

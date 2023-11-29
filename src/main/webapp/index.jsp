@@ -33,7 +33,7 @@
 
 <form method="get" action="Entrenamiento/detalleEntrenamiento.jsp">
     <p>Buscar Entrenamiento mediante ID</p>
-    <input type="text" name="idEntrenamiento">
+    <input type="text" name="id">
     <input type="submit" value="Enviar">
 </form>
 
