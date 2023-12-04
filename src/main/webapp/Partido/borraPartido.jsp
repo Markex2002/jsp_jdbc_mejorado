@@ -31,7 +31,7 @@
 		//CARGA DEL DRIVER Y PREPARACIÓN DE LA CONEXIÓN CON LA BBDD
 		//						v---------UTILIZAMOS LA VERSIÓN MODERNA DE LLAMADA AL DRIVER
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:30306/baloncesto","root", "user");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:30306/juego","root", "user");
 		
 //>>>>>>NO UTILIZAR STATEMENT EN QUERIES PARAMETRIZADAS
 //      Statement s = conexion.createStatement();
@@ -41,7 +41,7 @@
 		//UTILIZAR PreparedStatement SIEMPRE EN QUERIES PARAMETRIZADAS
 		//EN ESTE CASO 1 SOLO PARÁMETRO: socioID = ?
 		//NÓTESE QUE EL PARÁMETRO SE INTRODUCE CON UN CARÁCTER ?
-		String sql = "DELETE FROM socio WHERE socioID = ?";
+		String sql = "DELETE FROM partido WHERE id = ?";
 		//CREO EL OBJETO PreparedStatement
 		ps = conn.prepareStatement(sql);
 		
@@ -52,7 +52,7 @@
 		//CUANDO EJECUTAS SENTENCIAS DML, INSERT, UPDATE, DELETE SE EMPLEA ps.executeUpdate()
 		int filasAfectadas = ps.executeUpdate();
 		
-		System.out.println("SOCIOS BORRADOS:  " + filasAfectadas);
+		System.out.println("PARTIDOS BORRADOS:  " + filasAfectadas);
 		  
 	 } catch (Exception ex) {
 		 ex.printStackTrace();
@@ -68,6 +68,6 @@
     %>
     
     <!-- REDIRECCIÓN POR JavaScript EN EL CLIENTE  -->
-    <script>document.location = "pideNumeroSocio.jsp"</script> 
+    <script>document.location = "listadoPartidos.jsp"</script>
   </body>
 </html>
